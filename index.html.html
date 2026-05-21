@@ -1,0 +1,320 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Lego Vault | Our Six Years</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .lego-stud {
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0) 70%);
+        }
+        .spidey-web-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(121, 84, 101, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .rotate-scrapbook-1 { transform: rotate(-1deg); }
+        .rotate-scrapbook-2 { transform: rotate(1.5deg); }
+        
+        /* Lego Button Press Simulation */
+        .lego-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#f9d156",
+                      "on-background": "#1e1b1c",
+                      "outline": "#817478",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#f5eced",
+                      "on-secondary-fixed": "#2e014b",
+                      "surface-bright": "#fff8f8",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#faf1f3",
+                      "primary-fixed-dim": "#e9bacd",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "inverse-on-surface": "#f7eff0",
+                      "primary": "#795465",
+                      "on-surface": "#1e1b1c",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e9e0e2",
+                      "outline-variant": "#d2c3c7",
+                      "secondary-container": "#dcacfb",
+                      "on-primary-container": "#765162",
+                      "inverse-surface": "#342f31",
+                      "surface-variant": "#e9e0e2",
+                      "surface": "#fff8f8",
+                      "on-surface-variant": "#4f4448",
+                      "on-primary-fixed-variant": "#5f3c4d",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#241a00",
+                      "primary-container": "#f8c8dc",
+                      "on-secondary-container": "#643b80",
+                      "on-secondary-fixed-variant": "#5d357a",
+                      "surface-dim": "#e0d8d9",
+                      "secondary-fixed-dim": "#e2b5ff",
+                      "primary-fixed": "#ffd8e7",
+                      "secondary": "#764d93",
+                      "tertiary": "#735c00",
+                      "on-primary-fixed": "#2e1221",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#e9bacd",
+                      "on-tertiary-container": "#705900",
+                      "surface-container-high": "#efe6e7",
+                      "surface-tint": "#795465",
+                      "background": "#fff8f8",
+                      "tertiary-fixed": "#ffe088",
+                      "secondary-fixed": "#f3daff",
+                      "on-tertiary-fixed-variant": "#574500"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "display-lg": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-background spidey-web-bg pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 shadow-[10px_10px_20px_0px_rgba(118,77,147,0.1)]">
+</header>
+<main class="pt-24 px-gutter max-w-container-max mx-auto space-y-12"><section class="relative py-16 px-6 text-center bg-primary-container/30 rounded-3xl overflow-hidden border-2 border-white/50 shadow-sm mb-8">
+<!-- Decorative background elements -->
+<div class="absolute top-0 left-0 w-32 h-32 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-primary">local_florist</span>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-32 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-secondary">category</span>
+</div>
+<div class="relative z-10">
+
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4">
+      Happy 6th Anniversary!
+    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Hope&nbsp; you enjoy this little gift hehe</p>
+<div class="mt-8 flex justify-center gap-2">
+</div>
+</div>
+</section>
+<!-- Hero Section: Build of the Month -->
+<section class="relative">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-tertiary rounded-full flex items-center justify-center text-white z-10 shadow-lg">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-[10px_10px_20px_0px_rgba(118,77,147,0.15)] rotate-scrapbook-1 border-2 border-white/50">
+<div class="grid md:grid-cols-2">
+<div class="h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of a complex Lego architectural set, possibly a famous landmark, built with vibrant primary colors and intricate details. The lighting is sharp and focused, highlighting the plastic texture of the bricks. The composition is artistic, emphasizing the geometric patterns and the sense of accomplishment in the build, set against a soft lavender background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0IDw7fSFaRRa8PSYvmvNvAuLvbj7oLI_w7xyx1AVLxxH0FfFlrhPAzg9iVVXM7W5L4uL6CVq2ElRginbNNO-h38OFVEHp-ILjMd3PPUnqTxVbhmJfrEIttvK017jj8LQtFG5Knhjca-oh_-F0oZDQQqOjuPevEoDNwF6nlrs1g16lWdQzFZM9YOj9pgm7m2JUB9bppEzGda2jJoiUqA76GNj9KRINI_0tHqbJdx3IjU4CiFTOW-BlJNMQqh-j4_FW9OrSqxEPj3wCFUo">
+</div>
+<div class="p-8 flex flex-col justify-center bg-white/40 glass-panel relative">
+<!-- Cat-Ear Modal Motif -->
+<div class="absolute -top-3 left-8 flex gap-4">
+<div class="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-bottom-[12px] border-b-white"></div>
+<div class="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-bottom-[12px] border-b-white"></div>
+</div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-label-sm font-label-sm">Our First Date!!</span>
+<span class="text-tertiary font-bold">• Dec 2021</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">DCC - MAMZAR PARK</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">It was our first date together! hehe i remember us being so awkward here, now you fart in front of me!!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Floral Divider -->
+<div class="flex justify-center py-4">
+<div class="w-full max-w-md h-px bg-gradient-to-r from-transparent via-primary-container to-transparent relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-4">
+<span class="material-symbols-outlined text-primary opacity-40" data-icon="local_florist">local_florist</span>
+</div>
+</div>
+</div>
+<!-- Brick-by-Brick Timeline -->
+<section class="space-y-8">
+<div class="text-center">
+<h2 class="font-headline-md text-headline-md text-primary">Brick-by-Brick Timeline</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Building our life together, one piece at a time. (Get it? Cuz u like legos!)</p>
+</div>
+<div class="relative space-y-12 before:content-[''] before:absolute before:left-4 md:before:left-1/2 before:top-0 before:bottom-0 before:w-1 before:bg-outline-variant/30">
+<!-- Timeline Item 1 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between group">
+<div class="md:w-5/12 ml-12 md:ml-0 p-6 bg-white border-2 border-outline-variant shadow-[6px_6px_0px_0px_rgba(209,172,251,0.5)] rounded-lg hover:border-secondary transition-colors spidey-card">
+<span class="text-label-sm font-label-sm text-secondary block mb-2">Year 1</span>
+<h3 class="font-bold text-lg text-primary">COVID DAYS</h3>
+<p class="text-body-md">our first year together was hard but it was worth it, you were there when i was on the peak of my anxiety and you still chose to love me! hehe we should watch yung 90 days fiance again</p>
+<div class="mt-6 space-y-6">
+<div class="overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)] rotate-scrapbook-2 bg-surface-container-low">
+<img alt="Building together" class="w-full h-48 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu_GnTBoOD-kdGzsN0T9iTv0epcYaNA0xlst6kxKZC4tbRvmM4vHlX8AKmXWaaMF8NIYCj7iJN42StVvjGdmOW0D3EyEI5DwMTyLltEt_OyteG3YT-_QJh9cVDx5lmUKKaWOCpsO00DTnk-QAjifBt7BUK1fD87oDZgtPHTl08XjkR1BmT29Gaz-Og_AT447L7vR4WPWXVphb5z_JC1EJjWr3YmrKH5hL1QTDtO0PbFMtv7Db9dOJJ4Cm5BZpfYL3Zb_N8xczqDUXNCRM">
+<div class="p-2 bg-white text-center border-t border-outline-variant">
+<p class="font-body-md text-label-sm text-secondary italic">Building together</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)] rotate-scrapbook-1">
+<img alt="90 Day Fiance Marathons" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQCUUeieLRFjb4Nl-738FVPKVAynoed1nV6XU65OGq6C9o5mk5tiGDqpYRdEjTzjrvg36vNO8ox9XmWB5Ks19lCHESdtRiXjF8-szo5fUSVpsSIVBe2CcEWqQmwi6j8lHmwh3eycnW9gCGVyX5inn46IwquoIg27zKmqmrdoWWiILh3yDEnkm1Th0TbJX-HGczkuFVp23dOcc5K6cH3P9gXsXH6wcF9oyMOSDquW4kpPuFIRhPxIMxPaUN9ao3VJQlBXz4Ws9UozwPeIk">
+<div class="p-2 bg-white text-center border-t border-outline-variant">
+<p class="font-body-md text-label-sm text-secondary italic">90 Day Fiance Marathons</p>
+</div>
+</div>
+</div></div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 bg-tertiary-container border-4 border-white rounded-md shadow-md z-10 flex items-center justify-center">
+<div class="w-2 h-2 bg-tertiary rounded-full"></div>
+</div>
+<div class="hidden md:block md:w-5/12"></div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
+<div class="md:w-5/12 ml-12 md:ml-0 p-6 bg-white border-2 border-outline-variant shadow-[6px_6px_0px_0px_rgba(209,172,251,0.5)] rounded-lg hover:border-secondary transition-colors rotate-scrapbook-2">
+<span class="text-label-sm font-label-sm text-secondary block mb-2">Year 3</span>
+<h3 class="font-bold text-lg text-primary">Career Start!</h3>
+<p class="text-body-md">It was this year where we started to move our plans na in place, you going to new zealand and me starting my career na</p>
+<div class="mt-4 overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)]">
+<img alt="A professional and romantic photo of a couple planning their future, possibly with a subtle travel theme like a passport or map in the background, captured in soft warm lighting." class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoDnMiBO4p3NxrXAw8qV36pdoZDG1RLayP_mq8t4MJXQK3zHwk0y1trBPF8mqiee40AwUfdqTJ9HKHIps76-umUCr_Pu4GtELwe4vL26YqDAD0md3iqkXTiHWnhvxoUlvj-aSpiqGQgoARfXBIF7CmlKCjbrY9LI7zLFLB57GXgZezXxoI8eqvdPP-8ctvHWYrKo10rmPngyaSRzmvOYGZg0yAzBPDnDtQ4DB--f6Q15gSthiAMdBJq0iV6wsSaVi6YoEGrgqZjq_ygjM">
+</div></div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 bg-primary-container border-4 border-white rounded-md shadow-md z-10 flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="hidden md:block md:w-5/12"></div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between group">
+<div class="md:w-5/12 ml-12 md:ml-0 p-6 bg-white border-2 border-outline-variant shadow-[6px_6px_0px_0px_rgba(209,172,251,0.5)] rounded-lg hover:border-secondary transition-colors">
+<span class="text-label-sm font-label-sm text-secondary block mb-2">Year 6</span>
+<h3 class="font-bold text-lg text-primary">HAPPY 6TH ANNIVERSARY BABY</h3>
+<p class="text-body-md">Could be our last anniversary as well as boyfriend and girlfriend!! hehehe&nbsp;</p>
+<div class="mt-4 overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)]">
+<img alt="A celebratory and romantic photo of a happy couple celebrating their 6th anniversary, with heart-shaped decorations and soft romantic lighting." class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiHl0TtvrhNgTS0lpy9G-3TDlx6e_OjCyKxTYTuRdRX_HStkhfc_0gDfHG-oV6eM4h7h0wjjpNewXciljXIS-MAzlyEK49Sx811o64wYXCjMDY6iuXJPDusbIJsCBl0bVT4HDAODXJrw_Y8m4CNDXIERF4DEKjomlahVQMPE5Mt1B7eYuCEqgOVB_05un-tgiVduFPUHhlCAucUvslsfwZF1QY0D1XebVgmx8h1cQFtCQH5kunXXMjb1JTcvsKlBbGb8bwkhPYHe4vNAY">
+</div><div class="mt-6 space-y-6">
+<div class="overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)] rotate-scrapbook-2">
+<img alt="Building together" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3wkAgLc6TtyIzklbde4sSFQbBJVwU81KCV6G60TTPXCyuEbBGhoJPc8NjGS5qFjkECABrXlLvxCuFod09IwuVnm4fMUK37oC9SmP9oovsXp5xFjY1XU26kMkUZMtULL8AA82Aul6ITnhsPFFrVXQFliutwtj-l5xDlfHB0xGY9d_LuLPV_IFdO9mxg7K1tRUfyY0SlMy4tTQkDJy4kg-nGDw1JM2M78LNBRIIz5QMKHFjmbYYfAvtaPXMahoS_Mj3dMvhIT_fVLXbwE">
+<div class="p-2 bg-white text-center border-t border-outline-variant">
+<p class="font-body-md text-label-sm text-secondary italic">!!Please wear all the time!!</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg border-2 border-outline-variant shadow-[4px_4px_0px_0px_rgba(209,172,251,0.5)] rotate-scrapbook-1">
+<img alt="90 Day Fiance Marathons" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYTF5ChoCqdFT9Vfg3svmmhYRCY6s7OqW2WuE7A33iRr1n_NrkWJh9w1SLD666VW_Z7dMMkYEC-l7IZereA3SO4qhejodqGJOk204StA9B3I337RNCu3JzvLEWQDsINSvgwkN7JqI6JuE92PBefQvSQbDPGeCCJridgRCL1IOmBty7TRXhcQwY7yFzCq1fIftzOq1NlzUgREPJiC5gnU05Eofy-sjYYXYQG7O5m1SULwYyRnS56GXutWPzO0HVNed9tOue6lGN6NHl0m8">
+<div class="p-2 bg-white text-center border-t border-outline-variant">
+<p class="font-body-md text-label-sm text-secondary italic">YOU SAID YES!!</p>
+</div>
+</div>
+</div></div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 bg-secondary-container border-4 border-white rounded-md shadow-md z-10 flex items-center justify-center">
+<div class="w-2 h-2 bg-secondary rounded-full"></div>
+</div>
+<div class="hidden md:block md:w-5/12"></div>
+</div>
+</div>
+</section>
+<!-- Completed Sets: Bento Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Large Card -->
+<div class="col-span-2 row-span-2 group relative overflow-hidden rounded-xl border-2 border-white shadow-lg">
+</div>
+<!-- Mini Card 1 -->
+<!-- Mini Card 2 -->
+<!-- Horizontal Card -->
+<div class="col-span-2 flex bg-secondary-container/20 rounded-xl overflow-hidden border-2 border-outline-variant/30">
+<div class="w-1/3 h-full overflow-hidden">
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action: New Build -->
+<div class="bg-secondary p-8 rounded-2xl text-center space-y-6 shadow-xl relative overflow-hidden">
+<!-- Web pattern background decoration -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 10px 10px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Ready for the next piece?</h3>
+<p class="text-white/80 font-body-md mb-8">(Again, get it? das right im so funny) I'm excited to see you again lablab we celebrate properly when we see each other again okayy? I love you so muchhh</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<script>
+        // Simple Micro-interaction for Lego Buttons
+        document.querySelectorAll('.lego-btn').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'translateY(4px)';
+                btn.style.boxShadow = 'none';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = '';
+                btn.style.boxShadow = '';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = '';
+                btn.style.boxShadow = '';
+            });
+        });
+
+        // Atmospheric Scroll Effect for Scrapbook Items
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const opacity = Math.min(1, (window.innerHeight - rect.top) / 400);
+                    section.style.opacity = opacity;
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
